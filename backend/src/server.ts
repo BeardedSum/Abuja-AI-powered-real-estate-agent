@@ -12,6 +12,7 @@ import webhooksRouter from './routes/webhooks';
 import propertiesRouter from './routes/properties';
 import showingsRouter from './routes/showings';
 import offersRouter from './routes/offers';
+import adminRouter from './routes/admin';
 
 // Load environment variables
 dotenv.config();
@@ -62,6 +63,7 @@ app.use('/api/webhooks', webhooksRouter);
 app.use('/api/properties', propertiesRouter);
 app.use('/api/showings', showingsRouter);
 app.use('/api/offers', offersRouter);
+app.use('/api/admin', adminRouter);
 
 // Root endpoint
 app.get('/', (req: Request, res: Response) => {
